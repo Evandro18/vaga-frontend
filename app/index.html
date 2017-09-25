@@ -18,7 +18,23 @@
         <div class="product-payment__image">
           <img class="product-payment__image_dimensions" src="http://www.iconarchive.com/download/i3671/babasse/bagg-and-boxs/souris.ico" alt="">
         </div>
-        <div class="product-payment__form"></div>
+        <form class="form" action="" method="post">
+          <p class="form__label"> Escolha a bandeira do cartão</p>
+          <input class="form__input" type="radio" name="bandeira"> Elo
+          <input class="form__input" type="radio" name="bandeira"> Mastercard
+          <input class="form__input" type="radio" name="bandeira"> Amex
+          <input class="form__input" type="radio" name="bandeira"> Diners
+          <input class="form__input" type="radio" name="bandeira"> Visa
+
+          <div class="card">
+            <label for="numero">Número</label>
+            <input class="card-form__input" type="text" name="numero">
+            <label class="card-form_label" for="validade">validade</label>
+            <input class="card-form__input--size_s" type="text" name="validade">
+            <label for="titular">Titular</label>
+            <input class="card-form__input" type="text" name="titular">
+          </div>
+        </form>
       </div>
     </div>
     <script src="/js/main.js"></script>
