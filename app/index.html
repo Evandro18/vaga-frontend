@@ -18,7 +18,7 @@
         <div class="product-payment__image">
           <img class="product-payment__image_dimensions" src="http://www.iconarchive.com/download/i3671/babasse/bagg-and-boxs/souris.ico" alt="">
         </div>
-        <form class="form" action="" method="post">
+        <form class="form" action="" id="form">
           <p class="form__label"> Escolha a bandeira do cartão</p>
           <input class="form__input" type="radio" name="bandeira"> Elo
           <input class="form__input" type="radio" name="bandeira"> Mastercard
@@ -27,17 +27,24 @@
           <input class="form__input" type="radio" name="bandeira"> Visa
 
           <div class="card">
-            <label for="numero">Número</label>
-            <input class="card-form__input" type="text" name="numero">
-            <label class="card-form_label" for="validade">validade</label>
-            <input class="card-form__input--size_s" type="text" name="validade">
-            <label for="titular">Titular</label>
-            <input class="card-form__input" type="text" name="titular">
+            <label class="card-form_label" for="numero">Número</label>
+            <input class="card-form__input" type="text" name="numero" required>
+            <label class="card-form_label-validade" for="validade">validade</label>
+            <input class="masked card-form__input_size_s" type="text" pattern="(1[0-2]|0[1-9])\/(1[5-9]|2\d)" placeholder="MM/YY" name="validade" required>
+            <div class="card-form__fields-side-by-side">
+              <label for="titular">Titular</label>
+              <input class="card-form__input-titular_size_s" type="text" name="titular" required>
+              <label class="card-form_label-codigo" for="codigo">Codigo</label>
+              <input class="card-form__input-codigo_size_s" type="text" name="codigo" required>
+            </div>
           </div>
+        <button class="button" type="submit">CONCLUIR</button>        
         </form>
+
+        <div class="loader">
+        </div>
       </div>
     </div>
     <script src="/js/main.js"></script>
-
   </body>
 </html>

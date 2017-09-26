@@ -8,3 +8,10 @@ $accent-color: #E040FB;
 $divider-color: #BDBDBD;
 $text-dark-color: #212121;
 $font-size-default: 18px;
+
+//mixins 
+@mixin campoInput($width, $display, $margin-left) {
+  width: $width;  
+  display: $display;
+  margin-left: $margin-left;
+}
