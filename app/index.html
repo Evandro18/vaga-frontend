@@ -20,7 +20,7 @@
         </div>
         <form class="form" action="" id="form">
           <p class="form__label"> Escolha a bandeira do cartão</p>
-          <input class="form__input" type="radio" name="bandeira"> Elo
+          <input class="form__input" type="radio" name="bandeira" required> Elo
           <input class="form__input" type="radio" name="bandeira"> Mastercard
           <input class="form__input" type="radio" name="bandeira"> Amex
           <input class="form__input" type="radio" name="bandeira"> Diners
@@ -28,9 +28,9 @@
 
           <div class="card">
             <label class="card-form_label" for="numero">Número</label>
-            <input class="card-form__input" type="text" name="numero" required>
+            <input class="card-form__input" type="text" name="numero" pattern="[0-9]" required>
             <label class="card-form_label-validade" for="validade">validade</label>
-            <input class="masked card-form__input_size_s" type="text" pattern="(1[0-2]|0[1-9])\/(1[5-9]|2\d)" placeholder="MM/YY" name="validade" required>
+            <input class="masked card-form__input_size_s" type="text" pattern="(1[0-2]|0[1-9])\/(1[7-9]|2\d)" placeholder="MM/YY" name="validade" required>
             <div class="card-form__fields-side-by-side">
               <label for="titular">Titular</label>
               <input class="card-form__input-titular_size_s" type="text" name="titular" required>
@@ -40,7 +40,6 @@
           </div>
         <button class="button" type="submit">CONCLUIR</button>        
         </form>
-
         <div class="loader">
         </div>
       </div>

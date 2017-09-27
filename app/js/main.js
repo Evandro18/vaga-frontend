@@ -7,10 +7,14 @@ form.onsubmit = (e) => {
   showLoader(form);
 }
 
-var showLoader = (form) =>{
-	document.getElementsByClassName('loader')[0].style.visibility = 'visible'
+var showLoader = (form) => {
+  const container = document.getElementsByClassName('form')[0]
+  const loader = document.getElementsByClassName('loader')[0]
+  container.style.opacity = 0.5
+	loader.style.visibility = 'visible'
 	setTimeout(() => {
-  document.getElementsByClassName('loader')[0].style.visibility = 'hidden'
+  loader.style.visibility = 'hidden'
+  container.style.opacity = 1
   form.submit();
 },2000)
 }
