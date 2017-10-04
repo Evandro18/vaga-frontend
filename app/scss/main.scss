@@ -32,6 +32,15 @@ body {
     display: flex;
 }
 
+.product-payment_titulo {
+    color: $text-dark-color;
+}
+
+.product-payment_preco{
+    @extend .product-payment_titulo;
+    font-size: $font-size-default + 2;
+}
+
 .product-payment__image {
     background: $light-primary-color;
     width: 40%;

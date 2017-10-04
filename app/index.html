@@ -16,7 +16,9 @@
       <h3 class="container__text_black">Pagamento</h3>
       <div class="product-payment">
         <div class="product-payment__image">
+          <p class="product-payment_titulo">Produto</p>
           <img class="product-payment__image_dimensions" src="http://www.iconarchive.com/download/i3671/babasse/bagg-and-boxs/souris.ico" alt="">
+          <p class="product-payment_preco">Preço: R$ 30,00</p>
         </div>
         <form class="form" action="" id="form">
           <p class="form__label"> Escolha a bandeira do cartão</p>
@@ -28,17 +30,17 @@
 
           <div class="card">
             <label class="card-form_label" for="numero">Número</label>
-            <input class="card-form__input" type="text" name="numero" pattern="[0-9]" required>
+            <input class="card-form__input" type="text" name="numero" required>
             <label class="card-form_label-validade" for="validade">validade</label>
-            <input class="masked card-form__input_size_s" type="text" pattern="(1[0-2]|0[1-9])\/(1[7-9]|2\d)" placeholder="MM/YY" name="validade" required>
+            <input class="masked card-form__input_size_s" type="text" placeholder="MM/YY" name="validade" required>
             <div class="card-form__fields-side-by-side">
               <label for="titular">Titular</label>
-              <input class="card-form__input-titular_size_s" type="text" name="titular" required>
+              <input class="card-form__input-titular_size_s" type="text" pattern="^[a-zA-Z ]*$" name="titular" required>
               <label class="card-form_label-codigo" for="codigo">Codigo</label>
               <input class="card-form__input-codigo_size_s" type="text" name="codigo" required>
             </div>
           </div>
-        <button class="button" type="submit">CONCLUIR</button>        
+        <button class="button" type="submit">CONCLUIR PAGAMENTO</button>        
         </form>
         <div class="loader">
         </div>
